@@ -6,6 +6,24 @@
 str_1 = '79767669727976766972'
 str_2 = '656667'
 
+# 🤏 👑 ✅ Template:
+
+
+def reverse_func_temp(string):
+    result = ""  # Empty container
+    k = 2  # K-step: can be ANY integer
+
+    for i in range(len(string) - 1, -1, -k):
+        num = int(string[(i - (k-1)):(i + 1)])
+        result += chr(num)
+
+    return result
+
+
+print(reverse_func_temp(str_1))
+
+print(reverse_func_temp(str_2))
+
 
 def reverse_func(string):
     # Create empty result as the "string container" ("HELLO")
