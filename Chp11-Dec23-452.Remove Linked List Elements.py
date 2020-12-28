@@ -21,7 +21,12 @@ class ListNode:
             return False
 
 
-def removeElements(head, value):
+"""class ListNode:
+    def __init__(self, val, next=None):
+        self.val = val
+        self.next = next"""
+
+"""def removeElements(head, value):
     dummy = ListNode(0)
     dummy.next = head
     head = dummy
@@ -31,6 +36,38 @@ def removeElements(head, value):
             head.next = head.next.next
         else:
 
+            head = head.next
+
+    return dummy.next"""
+
+# ⏭ 所谓的指针 -> head
+
+"""def removeElements(head, val):
+    dummy = ListNode(0)
+    dummy.next = head
+    head = dummy
+
+    while dummy.next:
+        if dummy.next.val == val:
+            dummy.next = dummy.next.next
+        else:
+            head = head.next
+
+    return dummy.next"""
+
+
+def removeElements(head, val):
+
+    dummy = ListNode(0)
+    dummy.next = head
+    head = dummy
+
+    while head.next:
+        # 如果指针的下一个点为val，跳过
+        if head.next.val == val:
+            head.next = head.next.next
+        # 指针后移
+        else:
             head = head.next
 
     return dummy.next

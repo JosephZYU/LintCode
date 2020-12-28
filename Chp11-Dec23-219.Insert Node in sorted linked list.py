@@ -41,10 +41,10 @@ class ListNode:
         self.next = next
 
 
-def insertNode(self, head, val):
+def insertNode(head, val):
     """ create a NEW dummy node """
 
-    # 🎯 What is float('-inf') 最小整数值
+    # 🎯 What is float('-inf') 最小整数值?
     dummy = ListNode(float('-inf'))
     dummy.next = head
     curr_node = dummy
@@ -61,3 +61,8 @@ def insertNode(self, head, val):
     curr_node.next = new_node  # finally: link the current node with the new node
 
     return dummy.next
+
+
+a = ListNode([1, 4, 6], 5)
+
+print(a)
