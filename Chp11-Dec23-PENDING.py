@@ -9,19 +9,15 @@ Features of dummy point:
 
 
 class ListNode:
-    def __init__(self, data):
+    def __init__(self, value, next=None):
         "constructor to initiate this object"
-
-        # store data
-        self.data = data
-
-        # store reference (next item)
-        self.next = None
+        self.value = value
+        self.next = next
         return
 
     def has_value(self, value):
         "method to compare the value with the node data"
-        if self.data == value:
+        if self.value == value:
             return True
         else:
             return False
