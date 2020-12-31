@@ -9,6 +9,8 @@ class Solution:
     @param head: The head of Linked List
     @param val: An Integer
     @return: The head of new Linked List
+
+    # 🎯 understand what are conventions of writing @parameter, @return
     """
 
     def insertNode(self, head, val):  # head = 1->4->6->null ; val = 5
