@@ -40,7 +40,7 @@ def getStream(string):
 
 
 str_1 = ['a', 'a', 'a', 'a', 'a']
-str_2 = ['a', 'b', 'c', 'd', 'e']
+str_2 = ['a', 'b', 'c', 'b', 'a']
 str_3 = ['a', 'a', 'z', 'z', 'b']
 
 print(getStream(str_1))
