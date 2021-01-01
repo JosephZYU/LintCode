@@ -111,3 +111,22 @@ def reverse_func_3(string):
 
 print(reverse_func_3(str_1))
 print(reverse_func_3(str_2))
+
+
+def reverseString_4(string):
+    if string is None:
+        return ""
+
+    answer = ""
+
+    for i in range(0, len(string), 2):
+        num = int(string[i:i+2])
+        answer += chr(num)  # Can we use answer.append()?
+    return answer[::-1]
+
+
+str_1 = '7976766972'
+str_2 = '656667'
+
+print(reverseString_4(str_1))
+print(reverseString_4(str_2))
