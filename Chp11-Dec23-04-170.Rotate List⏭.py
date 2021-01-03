@@ -33,6 +33,14 @@ class listNode(object):
         self.val = val
         self.next = next
 
+
+class Solution:
+    """
+    @param head: the list
+    @param k: rotate to the right k places
+    @return: the list after rotation
+    """
+
     def get_length(self, head):
         length = 0
         while head:
@@ -48,19 +56,21 @@ class listNode(object):
         dummy.next = head
 
         length = self.get_length(head)
-        k = k % length
+        k %= length
+        # k = k % length # 👀 no matter how many cycles of total length, ONLY remainder matters
 
+        # ahead
         ahead = dummy
+        for _ in range(k):  # 👀 k = 2 -> 0, 1 -> perform twice!
+            ahead = ahead.next
 
-        # for i in range(k):
-        #     ahead = ahead.next
-
+        # behind
         behind = dummy
-
         while ahead.next:
             behind = behind.next
             ahead = ahead.next
 
+        # Rotate!
         ahead.next = dummy.next
         dummy.next = behind.next
         behind.next = None

@@ -1,9 +1,8 @@
 # Find the Middle of linked list
-
-
+# NOTE: 默认偶数时，为中间偏右
 # 0:20:38"
 
-class ListNode(object):
+class ListNode:
     def __init__(self, val, next=None):
         self.val = val
         self.next = next
