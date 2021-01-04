@@ -29,12 +29,16 @@ def reverseString(encodeString):
         return ""
 
     result = ""  # NOTE: your output has to be a string
+    k = 2
 
-    for i in range(0, len(encodeString), 2):
-        num = int(encodeString[i:i+2])
+    # ✅ test k-step: 3 - YES
+    for i in range(0, len(encodeString), k):
+        # ✅ Do we have to convert? - YES. have to convert first!
+        num = int(encodeString[i:i+k])
         alpha = chr(num)
         result += alpha
-        # result.append(alpha) # 🎯 figure append 🆚 +=
+        # ✅ figure append: list-only 🆚 +=: for string
+        # NOTE: Strings are immutable -- you can't append to them.
 
     return result[::-1]
 
